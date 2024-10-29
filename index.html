@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/JS/jquery-3.7.1.min.js"></script> <!-- jQuery phải trước Bootstrap -->
+    <script src="/JS/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <img src="../IMG/HEADER.PNG" width="100%">
+            </div>
+            <div class="row">
+                <nav class="navbar">
+                    <ul class="nav nav-navbar nav-expand">
+                        <li class="nav-item"><a href="#" class="nav-link">DANG NHAP</a></li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-primary mx-3" data-toggle="modal" data-target="#myModal">
+                                DANG KY
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="row">
+                <h1 style="text-align: center;">DANH SACH THAM GIA DOI ROBOCON KHOA CNTT</h1>
+                <table class="table table-bordered table-light table-primary table-hover table-striped" id="tbDanhSach">
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Ma Thanh Vien</th>
+                            <th>Ho Ten</th>
+                            <th>Lop</th>
+                            <th>Ngay Tham Gia</th>
+                            <th>Dien Thoai</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>K16-123456789</td>
+                            <td>Tran Thanh Kha</td>
+                            <td>DHKTPM16ATT</td>
+                            <td>22/02/2022</td>
+                            <td>0909-123-123</td>
+                            <td>thanhkha@iuh.edu.vn</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="ModalLabel">THONG TIN CA NHAN</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form">
+                            <div class="row form-group p-1">
+                                <div class="col-3">
+                                    <label for="">Ho Ten</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Ma: K16-1234567890" id="txtMa">
+                                </div>
+                                <div class="col-3">
+                                    <span id="tbMa">*</span>
+                                </div>
+                            </div>
+                            <div class="row form-group p-1">
+                                <div class="col-3">
+                                    <label for="">Ho Ten:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Ho ten: Tran Anh Dunng" id="txtHT">
+                                </div>
+                                <div class="col-3">
+                                    <span id="tbTen">*</span>
+                                </div>
+                            </div>
+
+                            <div class="row form-group p-1">
+                                <div class="col-3">
+                                    <label for="">Lop:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Lop: DHKTPM16KTT" id="txtLop">
+                                </div>
+                                <div class="col-3">
+                                    <span id="tbLop">*</span>
+                                </div>
+                            </div>
+
+                            <div class="row form-group p-1">
+                                <div class="col-3">
+                                    <label for="">Ngay Tham Gia:</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="date" class="form-control" id="txtDate">
+                                </div>
+                                <div class="col-3">
+                                    <span id="tbDate">*</span>
+                                </div>
+                            </div>
+                            <div class="row form-group p-1">
+                                <div class="col-3">
+                                    <label for="">Dien thoai</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="tel" class="form-control" placeholder="SDT: 0xxx-xxx-xxx" id="txtPhone">
+                                </div>
+                                <div class="col-3">
+                                    <span id="tbPhone">*</span>
+                                </div>
+                            </div>
+
+                            <div class="row form-group p-1">
+                                <div class="col-3">
+                                    <label for="">Gmail</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Email: xxxx@iuh.edu.vn" id="txtEmail">
+                                </div>
+                                <div class="col-3">
+                                    <span id="tbEmail">*</span>
+                                </div>
+                            </div>
+                            <div class="row p-1">
+                                <div class="col-6">
+                                    <input type="button" value="Luu" id="btnSave" class="btn btn-success btn-block">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <h6>SVTH: Do Binh Nghi</h6>
+            </div>
+            <div class="col-4">
+                <h6>Ma so sinh vien: 22653391</h6>
+            </div>
+            <div class="col-4">
+                <h6>Lop: DHTMDT18B</h6>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
